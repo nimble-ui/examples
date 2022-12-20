@@ -1,5 +1,5 @@
 import { e, t, _, c, f, attr, on, each, when } from 'nimble-ui'
-import mount from 'nimble-ui/client'
+import { mount } from 'nimble-ui/client'
 import type { Component, Middleware } from 'nimble-ui/types'
 import { State } from 'nimble-ui/middleware'
 

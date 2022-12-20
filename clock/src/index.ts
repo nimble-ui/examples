@@ -1,5 +1,5 @@
 import { e, c, _, each } from 'nimble-ui'
-import mount from 'nimble-ui/client'
+import { mount } from 'nimble-ui/client'
 import type { Component } from 'nimble-ui/types'
 import { Prop, State, Lifecycle } from 'nimble-ui/middleware'
 

@@ -1,5 +1,5 @@
 import { e, t, attr } from 'nimble-ui'
-import mount from 'nimble-ui/client'
+import { mount } from 'nimble-ui/client'
 
 const app = e('h1', [
     attr('class', () => 'title'),
