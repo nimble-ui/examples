@@ -7,7 +7,5 @@ This repository is where you can see NimbleUI in action! After cloning this repo
 
 > npm i
 
-> npm run build
+> npm run dev
 ```
-
-If Webpack does not emit errors, then you can open the `index.htm` file in the current directory.
