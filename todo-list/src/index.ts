@@ -1,4 +1,4 @@
-import { e, t, _, c, f, attr, on, each, when } from 'nimble-ui'
+import { e, t, _, c, f, attr, on, each } from 'nimble-ui'
 import { mount } from 'nimble-ui/client'
 import type { Component, Middleware } from 'nimble-ui/types'
 import { State } from 'nimble-ui/middleware'
@@ -50,14 +50,14 @@ const App: Component<{}> = use => {
             on('input', () => onInput)
         ]),
         e('button', [on('click', () => addTodo)], [t('+')]),
-        when(() => todos.items().length, each({
+        each({
             items: todos.items,
             trackBy: () => item => item.id,
         }, item => e('p', [], [
             e('button', [on('click', () => todos.removeTodoAt(item().id))], [t('Done')]),
             t(' '),
             _(() => item().item),
-        ])), e('p', [], [t('Nothing to do yet!')])),
+        ]), e('p', [], [t('Nothing to do yet!')])),
     ])
 }
 

@@ -18,7 +18,7 @@ const Clock: Component<{ format: (d: Date) => string[] }> = use => {
 }
 
 const app = c(Clock, () => ({
-    format: date => ['It is ', `${date.getHours()}`, date.getMinutes() ? `:${date.getMinutes()}` : " o'clock", '.']
+    format: date => ['It is ', `${date.getHours()}`, date.getMinutes() ? `:${Math.floor(date.getMinutes() / 60)}${date.getMinutes() % 60}` : " o'clock", ` with ${date.getSeconds()}s`].join('').split('')
 }))
 
 window.addEventListener('load', function () {
